@@ -183,7 +183,7 @@ The zkNode Architecture is composed of:
 
 The architecture of zkNode is modular and implements a set of functions as depicted in **Figure 3** above.</br>
 
-  3. **RPC**: RPC (Remote Procedure Call) is a JSON RPC interface compatible with Ethereum. For a software application to interact with the Ethereum blockchain (by reading blockchain data and/or sending transactions to the network), it must connect to an Ethereum node. RPC enables integration of the zkEVM with existing tools, such as Metamask, Etherscan and Infura. It adds transactions to the **Pool** and interacts with the **State** using read-only methods. 
+  3. **RPC**: RPC (Remote Procedure Call) is a JSON RPC interface compatible with Ethereum. For a software application to interact with the Ethereum blockchain (by reading blockchain data and/or sending transactions to the network), it must connect to an Ethereum node. RPC enables integration of the zkEVM with existing tools, such as Metamask, Etherscan and Infura. It adds transactions to the **Pool** and interacts with the **State** using read-only methods. An example of this can be [Alchemy](https://docs.alchemy.com/reference/polygon-zkevm-api-quickstart) through which developers can submit transactions and access up-to-date network data.
 
  4. **State**: A subcomponent that implements the Merkle Tree and connects to the DB backend. It checks integrity at the block level (information related to gas and block size, among others) and some transaction-related information (signatures, sufficient balance). State also stores smart contract code into the Merkle tree and processes transactions using the EVM.
 
